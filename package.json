@@ -1,0 +1,21 @@
+{
+  "name": "segment.social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.html",
+  "scripts": {
+    "test": "gulp test",
+    "postinstall": "bower install",
+    "start": "python -m SimpleHTTPServer 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/pburtchaell/segment.social"
+  },
+  "author": "Patrick Burtchaell <patrick@segment.social>",
+  "license": "All rights reserved.",
+  "bugs": {
+    "url": "https://github.com/pburtchaell/segment.social/issues"
+  },
+  "homepage": "https://github.com/pburtchaell/segment.social"
+}

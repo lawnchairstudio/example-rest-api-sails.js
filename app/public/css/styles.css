@@ -1,0 +1,115 @@
+body {
+  display: block;
+  margin: 0;
+}
+
+#main {
+  display: block;
+  position: relative;
+  background: #E3B7A5;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Cooper Hewitt';
+}
+
+#page-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.page-content {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+p,
+h1 {
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  letter-spacing: 1rem;
+}
+
+a {
+  font-size: 10px;
+  color:#fff;
+  text-decoration: none;
+  background: #F96A4D;
+  padding: 10px 10px 10px 13px;
+  line-height: 2.5;
+  display: inline-block;
+}
+a:hover {
+  background: #C04D36;
+}
+
+.logo {
+  flex: 1 auto;
+  display: block;
+  position: relative;
+  align-self: center;
+  width: 25vh;
+  height: 25vh;
+  text-align: center;
+  opacity: .75;
+}
+
+.one {
+  -webkit-animation-name: rotate-left;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  transform-origin: center center;
+  box-shadow: 0 0 1px 1px rgba(10,10,11,.5);
+}
+
+.two {
+  -webkit-animation-name: rotate-right;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  transform-origin: center center;
+}
+
+.three {
+  -webkit-animation-name: rotate-right;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  transform-origin: center center;
+}
+
+.four {
+  display: block;
+  -webkit-animation-name: rotate-left;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  transform-origin: center center;
+}
+
+@-webkit-keyframes rotate-left {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-right {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('fonts/cooperhewitt/400.woff')format('woff');
+  font-weight: 400;
+  font-style: normal;
+}

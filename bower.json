@@ -1,0 +1,11 @@
+{
+  "name": "segment.social",
+  "version": "0.0.0",
+  "authors": [
+    "Patrick Burtchaell <patrick@pburtchaell.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "particles.js": "~1.0.3"
+  }
+}
