@@ -1,21 +1,27 @@
 {
-  "name": "segment.social",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app/index.html",
-  "scripts": {
-    "test": "gulp test",
-    "postinstall": "bower install",
-    "start": "python -m SimpleHTTPServer 8000"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/pburtchaell/segment.social"
-  },
-  "author": "Patrick Burtchaell <patrick@segment.social>",
-  "license": "All rights reserved.",
-  "bugs": {
-    "url": "https://github.com/pburtchaell/segment.social/issues"
-  },
-  "homepage": "https://github.com/pburtchaell/segment.social"
+    "name": "segment",
+    "version": "0.1.0",
+    "description": "Fuck descriptions",
+    "author": "Segment",
+    "main": "index.js",
+    "scripts": {
+        "test": "grunt test"
+    },
+    "dependencies": {
+        "kraken-js": "^1.0.1",
+        "kraken-devtools": "^1.0.0",
+        "engine-munger": "^0.2.0",
+        "express": "^4.3.0"
+    },
+    "devDependencies": {
+        "mocha": "^1.18.0",
+        "supertest": "^0.9.0"
+    },
+    "generator-kraken": {
+        "version": "1.1.2",
+        "template": false,
+        "css": "less",
+        "js": false,
+        "task": "grunt"
+    }
 }
