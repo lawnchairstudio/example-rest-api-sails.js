@@ -1,0 +1,22 @@
+/**!
+ * @module typography#anchor
+ * @description Anchor link styles.
+ */
+
+a {
+  text-decoration: none;
+  color: @color-black;
+}
+
+a.line,
+a.line:visited {
+
+  color: @color-blue;
+  text-decoration: underline;
+
+  &:active,
+  &:hover {
+    opacity: .5;
+  }
+
+}

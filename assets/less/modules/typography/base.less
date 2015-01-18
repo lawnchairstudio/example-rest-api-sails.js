@@ -1,0 +1,60 @@
+/**!
+ * @module typography#base
+ * @description Common typography styles.
+ * @since 0.2.0
+ */
+html {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0.25rem 0 0.75rem 0;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+
+  aside { 
+    margin: 1rem; 
+  }
+
+  code {
+    display: inline-block;
+    line-height: 1.0;
+  }
+}
+
+small {
+  .small();
+}
+
+strike {
+  opacity: 0.5;
+}
+
+time {
+  font-family: @font-family-secondary;
+}
+
+hr {
+  border: .125rem solid;
+  margin: 1rem 0 .5rem 0;
+  width: 1rem;
+}
+
+br {
+  height: 1rem;
+}
+
+abbr,
+acronym {
+  text-transform: uppercase;
+  border-bottom: 1px dashed;
+  cursor: help;
+}
+abbr {
+  text-transform: none;
+}
