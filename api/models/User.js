@@ -25,6 +25,10 @@ module.exports = {
       required: true,
       unique: true
     },
+    admin: {
+      type: "boolean",
+      defaultsTo: false
+    },
     encryptedPassword: {
       type: "string",
     },
@@ -37,6 +41,17 @@ module.exports = {
       delete obj._csrf;
       return obj;
     }
+  },
+
+  beforeValidation: function (values, next) {
+    if (typeof values.admin !== 'undefined') {
+      if (values.admin === 'unchecked') {
+        values.admin = false;
+      } else  if (values.admin[1] === 'on') {
+        values.admin = true;
+      }
+    }
+    next();
   },
 
   beforeCreate: function (values, next) {
