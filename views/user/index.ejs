@@ -2,12 +2,17 @@
 
 <% _.each(users, function(user) { %>
 <ul>
-  <li><%= user.id %></td>
-  <li><%= user.name %></td>
-  <li><%= user.username %></td>
-  <li><%= user.email %></td>
-  <li><a href="<%= user.id %>">SHOW</a></td>
-  <li><a href="/user/edit/<%= user.id %>">EDIT</a></td>
+  <li><%= user.id %></li>
+  <li><%= user.name %></li>
+  <li><%= user.username %></li>
+  <li><%= user.email %></li>
+  <% if (user.admin) { %>
+    <li>ADMIN</li>
+  <% } else { %>
+    <li>REG USER</li>
+  <% } %>
+  <li><a href="/user/show/<%= user.id %>">SHOW</a></li>
+  <li><a href="/user/edit/<%= user.id %>">EDIT</a></li>
   <li><form action="/user/delete/<%= user.id %>" method="POST">
     <input type="hidden" name="_method" value="delete"/>
     <input type="hidden" name="_csrf" value="<%= _csrf %>" />
