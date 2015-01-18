@@ -11,7 +11,7 @@ Segment is powered by [Sails](http://sailsjs.org/), a MVC framework for Node.js,
 
 ## Deployment
 
-Segment is deployed to an instance on Heroku. If this is your first time deploying the app, follow steps 1-7. Otherwise, just skip to step 8. For more, see the [Heroku Documentation on Node.js applications](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).
+Segment is deployed to an instance on Heroku, an application platform. If this is your first time deploying the app, follow steps 1-7. Otherwise, just skip to step 8. For more, see the [Heroku Documentation on Node.js applications](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).
 
 1. Create new app: `heroku create segment`
 2. Deploy the app: `git push heroku master`
