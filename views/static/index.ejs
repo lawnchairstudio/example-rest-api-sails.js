@@ -1,3 +1,9 @@
 <h1>This is our home page.</h1>
 <a href="/register">Sign Up!</a>
 <a href="/session/new">Sign In!</a>
+
+<br />
+
+<% if (session.authenticated) { %>
+  <a href="<%= session.User.id %>"><%= session.User.name %></a>
+<% } %>
