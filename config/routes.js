@@ -36,7 +36,7 @@ module.exports.routes = {
     view: 'static/index'
   },
 
-  '/:id': {
+  /*'/:id': {
     controller: 'user',
     action: 'profile'
   },
