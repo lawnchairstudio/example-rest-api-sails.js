@@ -40,7 +40,7 @@ module.exports = {
 			// Create the user successfully and redirect to the show action
 			//res.json(user);
 
-			res.redirect('/user/profile/'+user.id);
+			res.redirect(user.id);
 		});
 	},
 
