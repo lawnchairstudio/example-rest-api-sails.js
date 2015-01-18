@@ -9,7 +9,7 @@ Segment is powered by [Sails](http://sailsjs.org/), a MVC framework for Node.js,
 1. Install dependencies: `npm install`
 2. Start the application: `npm start`
 
-### Database 
+### Database
 
 While in development, a local database is used.
 
@@ -52,7 +52,7 @@ Segment is deployed to an instance on Heroku, an application platform. If this i
 2. Deploy the app: `git push heroku master`
 3. Insure that at least one instance is running: `heroku ps:scale web=1`
 
-Other helpful tasks: 
+Other helpful tasks:
 
 - View logs: `heroku logs --tail`
 - Open the application: `heroku open`
