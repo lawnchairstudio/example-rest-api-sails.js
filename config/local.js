@@ -82,4 +82,14 @@ module.exports = {
 
    // environment: process.env.NODE_ENV || 'development'
 
+   connections: {
+     mongodb: {
+       host      : 'localhost',
+       port      : 27017,
+       user      : '',
+       password  : '',
+       database  : 'segment'
+     }
+   }
+
 };

@@ -9,3 +9,10 @@ bower_components
 
 # npm
 npm-debug.log
+
+journal
+local.0
+local.ns
+mongod.lock
+segment.0
+segment.ns
