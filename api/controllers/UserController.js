@@ -35,7 +35,7 @@ module.exports = {
 				}
 
 				// redirect back to user signup
-				return res.redirect('/register');
+				return res.redirect('/user/new');
 			}
 
 			// Create the user successfully and redirect to the show action

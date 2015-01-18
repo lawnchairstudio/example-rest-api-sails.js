@@ -41,7 +41,7 @@ module.exports.routes = {
     action: 'profile'
   },
 
-  '/register': {
+  /*'/register': {
     controller: 'user',
     action: 'new'
   }/*,
