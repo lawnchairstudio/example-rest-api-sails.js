@@ -10,11 +10,17 @@ pre {
   overflow: auto;
   margin: 2rem 0;
   padding: 0 1rem 0 2rem;
-  color: fadeOut(@dark-grey, 20%);
+  color: @color-black;
   background: @light-grey;
-  &::-webkit-scrollbar { height: 0.5rem;}
-  &::-webkit-scrollbar-track-piece  { border: none; }
-  &::-webkit-scrollbar-thumb:horizontal { background: darken(@light-grey,10%);}
+  &::-webkit-scrollbar { 
+    height: 0.5rem;
+  }
+  &::-webkit-scrollbar-track-piece  { 
+    border: none; 
+  }
+  &::-webkit-scrollbar-thumb:horizontal { 
+    background: @color-black; 
+  }
 }
 
 code {
@@ -27,8 +33,7 @@ li code,
 p code {
   padding: 2px;
   margin: 0 !important;
-  color: fadeOut(@dark-grey, 20%);
-  background: fadeOut(@dark-grey, 97%);
+  background: @color-grey;
 }
 
 pre code {

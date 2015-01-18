@@ -22,76 +22,33 @@ p {
   }
 
   code {
-    background: fadeOut(@dark-grey, 95%);
     display: inline-block;
     line-height: 1.0;
   }
-}
-
-.small() {
-  font-size: 0.775rem;
-  line-height: 2.205;
-  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 small {
   .small();
 }
 
-.title { 
-  margin-bottom: 0; 
-}
-
-.subtitle {
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: .275rem;
-  margin: 0;
-  opacity: 0.9;
-}
-
-em, i {
-  strong, b {
-    font-weight: 600;
-    font-style: italic;
-  }
-}
-
 strike {
   opacity: 0.5;
 }
 
-.centered {
-  text-align: center;
-}
-
 time {
-  font-family: 'DIN Pro', @font-stack;
+  font-family: @font-family-secondary;
 }
 
-/* deafult horizontal rule styles */
 hr {
-
   border: .125rem solid;
   margin: 1rem 0 .5rem 0;
   width: 1rem;
-
-  &.small { margin: 0 }
-  &.ctr { margin: 1rem auto }
-
-  &.large {
-    min-width: 550px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-
 }
 
 br {
   height: 1rem;
 }
 
-/* default abbreviations styles */
 abbr,
 acronym {
   text-transform: uppercase;
