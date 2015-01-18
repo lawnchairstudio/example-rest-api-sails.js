@@ -14,8 +14,10 @@ module.exports = {
       type: "string",
       required: true
     },
-    title: {
+    username: {
       type: "string",
+      required: true,
+      unique: true
     },
     email: {
       type: "string",

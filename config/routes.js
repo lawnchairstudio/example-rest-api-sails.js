@@ -36,10 +36,9 @@ module.exports.routes = {
     view: 'static/index'
   },
 
-  '/register': {
-    controller: 'register',
-    views: 'register',
-    action: 'register'
+  '/:id': {
+    controller: 'user',
+    action: 'profile'
   }
 
   /***************************************************************************

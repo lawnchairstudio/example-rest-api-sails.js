@@ -4,9 +4,9 @@
 <ul>
   <li><%= user.id %></td>
   <li><%= user.name %></td>
-  <li><%= user.title %></td>
+  <li><%= user.username %></td>
   <li><%= user.email %></td>
-  <li><a href="/user/show/<%= user.id %>">SHOW</a></td>
+  <li><a href="<%= user.id %>">SHOW</a></td>
   <li><a href="/user/edit/<%= user.id %>">EDIT</a></td>
   <li><form action="/user/delete/<%= user.id %>" method="POST">
     <input type="hidden" name="_method" value="delete"/>
