@@ -84,10 +84,10 @@ module.exports = {
 
    connections: {
      mongodb: {
-       host      : 'localhost',
-       port      : 27017,
-       user      : '',
-       password  : '',
+       host      : 'ds029541.mongolab.com',
+       port      : 29541,
+       user      : 'dev',
+       password  : 'lime10',
        database  : 'segment'
      }
    }
