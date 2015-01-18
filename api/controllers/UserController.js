@@ -75,7 +75,7 @@ module.exports = {
 
 	update: function (req, res, next) {
 		User.update(req.param('id'), req.params.all(), function userUpdated(err) {
-      if (err) { 
+      if (err) {
 				return res.redirect('/user/edit/' + req.param('id'));
       }
 			res.redirect('/user/profile/' + req.param('id'))
@@ -84,11 +84,11 @@ module.exports = {
 
 	'delete': function (req, res, next) {
 		User.findOne(req.param('id'), function foundUser(err, user) {
-			
+
       if (err) {
 				return next(err);
       }
-       
+
       if (!user) {
 				return next("User doesn't exist!");
       }
