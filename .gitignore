@@ -1,1 +1,10 @@
+# Dependencies
 node_modules
+bower_components
+
+# Build
+.build
+.cache
+
+# npm
+npm-debug.log
