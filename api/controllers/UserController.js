@@ -13,7 +13,6 @@ module.exports = {
 
 	create: function (req, res, next) {
 
-		// Create a user using the new.ejs sign up form params
 		User.create(req.params.all(), function userCreated (err, user) {
 			// If we have an error creating the user
 			if (err) {
@@ -30,4 +29,5 @@ module.exports = {
 			res.json(user);
 		});
 	}
+  
 };

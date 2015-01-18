@@ -34,6 +34,13 @@ module.exports.routes = {
 
   '/': {
     view: 'static/index'
+    view: 'homepage'
+  },
+
+  '/register': {
+    controller: 'register',
+    views: 'register',
+    action: 'register'
   }
 
   /***************************************************************************
