@@ -7,14 +7,15 @@
   "main": "index.js",
   "scripts": {
     "test": "",
-    "postinstall": "gulp build",
-    "start": "node index.js"
+    "postinstall": "",
+    "start": "node server.js"
   },
   "dependencies": {
-    "kraken-js": "^1.0.1",
-    "kraken-devtools": "^1.0.0",
     "engine-munger": "^0.2.0",
-    "express": "^4.3.0"
+    "express": "^4.3.0",
+    "kraken-devtools": "^1.0.0",
+    "kraken-js": "^1.0.1",
+    "less": "^2.2.0"
   },
   "devDependencies": {
     "mocha": "^1.18.0",
