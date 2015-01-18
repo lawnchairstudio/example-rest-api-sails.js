@@ -1,27 +1,30 @@
 {
-    "name": "segment",
-    "version": "0.1.0",
-    "description": "Fuck descriptions",
-    "author": "Segment",
-    "main": "index.js",
-    "scripts": {
-        "test": "grunt test"
-    },
-    "dependencies": {
-        "kraken-js": "^1.0.1",
-        "kraken-devtools": "^1.0.0",
-        "engine-munger": "^0.2.0",
-        "express": "^4.3.0"
-    },
-    "devDependencies": {
-        "mocha": "^1.18.0",
-        "supertest": "^0.9.0"
-    },
-    "generator-kraken": {
-        "version": "1.1.2",
-        "template": false,
-        "css": "less",
-        "js": false,
-        "task": "grunt"
-    }
+  "name": "segment",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "author": "Segment Development Team",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "postinstall": "gulp build",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "kraken-js": "^1.0.1",
+    "kraken-devtools": "^1.0.0",
+    "engine-munger": "^0.2.0",
+    "express": "^4.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0"
+  },
+  "generator-kraken": {
+    "version": "1.1.2",
+    "template": false,
+    "css": "less",
+    "js": false,
+    "task": "grunt"
+  }
 }
