@@ -13,6 +13,7 @@ module.exports = {
 				return next(err);
 
 			res.view({
+				title: 'User List',
 				users: users
 			});
 		});
@@ -51,6 +52,7 @@ module.exports = {
 				return next();
 
 			res.view({
+				title: user.name,
 				user: user
 			});
 		});
@@ -64,6 +66,7 @@ module.exports = {
 				return next();
 
 			res.view({
+				title: 'Editing: ' + user.name,
 				user: user
 			});
 		});
