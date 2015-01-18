@@ -1,0 +1,25 @@
+/**!
+ * @module buttons#base
+ * @description Common button styles.
+ */
+ 
+button,
+.btn {
+  
+  -webkit-appearance: none;
+  
+  .box-sizing();
+  
+  &:hover,
+  &:active { 
+    outline: 0; 
+  }
+
+  &.no-hover {
+    &:hover { 
+      cursor: default;
+      opacity: 1; 
+    }
+  }
+  
+}

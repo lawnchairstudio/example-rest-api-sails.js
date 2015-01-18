@@ -1,0 +1,23 @@
+/**!
+ * @module typography#anchor
+ * @description Anchor link styles.
+ */
+
+a {
+  text-decoration: none;
+  color: @dark-grey;
+}
+
+a.line,
+a.line:visited {
+
+  @color: rgb(0,169,198,.5);
+  color: @color;
+  text-decoration: underline;
+
+  &:active,
+  &:hover {
+    opacity: .5;
+  }
+
+}

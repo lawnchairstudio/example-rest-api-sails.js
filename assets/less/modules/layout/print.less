@@ -1,0 +1,20 @@
+/**!
+ * @module layout#print
+ * @description Print stylesheet 
+ */
+
+body { 
+  background: white;
+  color: black; 
+  font-size: 12px;  
+}
+
+main {
+  margin: 1rem;
+  &:after {
+    display: block;
+    width: 100%;
+    text-align: center;
+    content: "";
+  }
+}

@@ -1,0 +1,103 @@
+/**!
+ * @module typography#base
+ * @description Common typography styles.
+ * @since 0.2.0
+ */
+html {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0.25rem 0 0.75rem 0;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+
+  aside { 
+    margin: 1rem; 
+  }
+
+  code {
+    background: fadeOut(@dark-grey, 95%);
+    display: inline-block;
+    line-height: 1.0;
+  }
+}
+
+.small() {
+  font-size: 0.775rem;
+  line-height: 2.205;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+small {
+  .small();
+}
+
+.title { 
+  margin-bottom: 0; 
+}
+
+.subtitle {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .275rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+em, i {
+  strong, b {
+    font-weight: 600;
+    font-style: italic;
+  }
+}
+
+strike {
+  opacity: 0.5;
+}
+
+.centered {
+  text-align: center;
+}
+
+time {
+  font-family: 'DIN Pro', @font-stack;
+}
+
+/* deafult horizontal rule styles */
+hr {
+
+  border: .125rem solid;
+  margin: 1rem 0 .5rem 0;
+  width: 1rem;
+
+  &.small { margin: 0 }
+  &.ctr { margin: 1rem auto }
+
+  &.large {
+    min-width: 550px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+}
+
+br {
+  height: 1rem;
+}
+
+/* default abbreviations styles */
+abbr,
+acronym {
+  text-transform: uppercase;
+  border-bottom: 1px dashed;
+  cursor: help;
+}
+abbr {
+  text-transform: none;
+}
