@@ -44,7 +44,12 @@ module.exports.routes = {
   '/register': {
     controller: 'user',
     action: 'new'
-  }
+  }/*,
+
+  '/session/new': {
+    controller: 'session',
+    action: 'new'
+  }*/
 
   /***************************************************************************
   *                                                                          *
