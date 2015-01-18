@@ -15,6 +15,7 @@
     "npm": "2.1.18"
   },
   "dependencies": {
+    "bcrypt": "^0.8.0",
     "ejs": "~0.8.4",
     "express": "^4.3.0",
     "include-all": "~0.1.3",
