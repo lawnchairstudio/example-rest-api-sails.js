@@ -45,11 +45,11 @@ module.exports = {
 			// Create the user successfully and redirect to the show action
 			//res.json(user);
 
-			res.redirect(user.id);
+			res.redirect('/user/show/' + user.id);
 		});
 	},
 
-	profile: function (req, res, next) {
+	show: function (req, res, next) {
 		User.findOne(req.param('id'), function foundUser (err,user) {
 			if (err)
 				return next(err);
@@ -82,7 +82,7 @@ module.exports = {
       if (err) {
 				return res.redirect('/user/edit/' + req.param('id'));
       }
-			res.redirect(req.param('id'))
+			res.redirect('/user/show/' + req.param('id'))
 		});
 	},
 
