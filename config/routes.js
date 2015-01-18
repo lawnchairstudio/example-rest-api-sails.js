@@ -39,6 +39,11 @@ module.exports.routes = {
   '/:id': {
     controller: 'user',
     action: 'profile'
+  },
+
+  '/register': {
+    controller: 'user',
+    action: 'new'
   }
 
   /***************************************************************************
