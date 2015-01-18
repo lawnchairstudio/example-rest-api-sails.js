@@ -45,7 +45,7 @@ module.exports = {
 			if (!user) {
 				var noAccountError = [{
 					name: 'noAccount',
-					message: 'The email address ' + req.param('email') + ' not found.'
+					message: 'The email address ' + req.param('email') + ' was not found.'
 				}]
 				req.session.flash = {
 					err: noAccountError
@@ -85,7 +85,7 @@ module.exports = {
 						loggedIn: true,
 						id: user.id,
 						name: user.name,
-						action: ' has logged in.'
+						action: ' has signed in.'
 					});
 
 					// If the user is also an admin redirect to the user list (e.g. /views/user/index.ejs)
@@ -120,7 +120,7 @@ module.exports = {
 						loggedIn: false,
 						id: userId,
 						name: user.name,
-						action: ' has logged out.'
+						action: ' has signed out.'
 					});
 
 					// Wipe out the session (log out)
