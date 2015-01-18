@@ -1,8 +1,7 @@
 'use strict';
 
-
-module.exports = function IndexModel() {
-    return {
-        name: 'index'
-    };
+module.exports = function model () {
+  return {
+    name: 'index'
+  };
 };
