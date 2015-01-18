@@ -9,9 +9,9 @@ module.exports = {
 
 	index: function (req, res, next) {
 		User.find(function foundUsers (err, users) {
-			if (err)
+      if (err) {
 				return next(err);
-
+      }
 			res.view({
 				title: 'User List',
 				users: users
@@ -26,6 +26,7 @@ module.exports = {
 	create: function (req, res, next) {
 
 		User.create(req.params.all(), function userCreated (err, user) {
+
 			// If we have an error creating the user
 			if (err) {
 				console.log(err);
@@ -74,19 +75,23 @@ module.exports = {
 
 	update: function (req, res, next) {
 		User.update(req.param('id'), req.params.all(), function userUpdated(err) {
-			if (err)
+      if (err) { 
 				return res.redirect('/user/edit/' + req.param('id'));
-
+      }
 			res.redirect('/user/profile/' + req.param('id'))
 		});
 	},
 
 	'delete': function (req, res, next) {
 		User.findOne(req.param('id'), function foundUser(err, user) {
-			if (err)
+			
+      if (err) {
 				return next(err);
-			if (!user)
+      }
+       
+      if (!user) {
 				return next("User doesn't exist!");
+      }
 
 			User.destroy(req.param('id'), function userDeleted(err) {
 				if(err)
