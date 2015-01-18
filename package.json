@@ -10,6 +10,10 @@
     "postinstall": "",
     "start": "node app.js"
   },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "2.1.18"
+  },
   "dependencies": {
     "ejs": "~0.8.4",
     "express": "^4.3.0",
