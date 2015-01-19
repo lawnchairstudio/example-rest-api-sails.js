@@ -46,16 +46,26 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## Deployment
 
-Segment is deployed to an instance on Heroku, an application platform. If this is your first time deploying the app, follow steps 1-7. Otherwise, just skip to step 8. For more, see the [Heroku Documentation on Node.js applications](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).
+Segment is deployed to an instance on Heroku, an application platform. If this is your first time deploying the app, follow steps 1-6. Otherwise, just skip to step 4. For more, see the [Heroku Documentation on Node.js applications](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).
 
 1. Create new app: `heroku create segment`
-2. Deploy the app: `git push heroku master`
-3. Insure that at least one instance is running: `heroku ps:scale web=1`
+2. Add Redis: `heroku addons:add redistogo`
+3. Add MongoDB: `heroku addons:add mongolab`
+4. Deploy the app: `git push heroku master`
+5. Set the environment to production: `heroku config:set NODE_ENV=production`
+6. Insure that at least one instance is running: `heroku ps:scale web=1`
 
 Other helpful tasks:
 
-- View logs: `heroku logs --tail`
+- View application logs: `heroku logs --tail`
 - Open the application: `heroku open`
+- View application configuration: `heroku config`
+
+Addons: 
+
+- [Redis to Go](https://addons.heroku.com/redistogo)
+- [MongoLab](https://addons.heroku.com/mongolab)
+- [New Relic APM](https://addons.heroku.com/newrelic)
 
 The command that Heroku executes to start the application is defined in the procfile. The procfile declares a single process type, `web`, and the command needed to run it. For more, see the [Heroku documentation](https://devcenter.heroku.com/articles/getting-started-with-nodejs#define-a-procfile).
 
