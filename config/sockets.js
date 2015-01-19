@@ -12,33 +12,31 @@
 
 module.exports.sockets = {
 
-  /***************************************************************************
-  *                                                                          *
-  * This custom onConnect function will be run each time AFTER a new socket  *
-  * connects (To control whether a socket is allowed to connect, check out   *
-  * `authorization` config.) Keep in mind that Sails' RESTful simulation for *
-  * sockets mixes in socket.io events for your routes and blueprints         *
-  * automatically.                                                           *
-  *                                                                          *
-  ***************************************************************************/
-  onConnect: function(session, socket) {
-
-    // By default, do nothing.
+  /** 
+   * @function onConnect
+   * @summary This function will be run each time after a new socket connects.
+   * @description This function will be run each time after a new socket
+   * connect. To control whether a socket is allowed to connect, check out
+   * `authorization` config. Keep in mind that Sails' RESTful simulation for
+   * sockets mixes in socket.io events for your routes and blueprints
+   * automatically.
+   * @param session
+   * @param socket
+   */
+  onConnect: function (session, socket) {
 
   },
 
+  /**
+   * @function onDisconnect
+   * @description This custom onDisconnect function will be run each time a socket
+   * disconnects.
+   * @param session
+   * @param socket
+   */
+  onDisconnect: function (session, socket) {
 
-  /***************************************************************************
-  *                                                                          *
-  * This custom onDisconnect function will be run each time a socket         *
-  * disconnects                                                              *
-  *                                                                          *
-  ***************************************************************************/
-  onDisconnect: function(session, socket) {
-
-    // By default: do nothing.
   },
-
 
   /***************************************************************************
   *                                                                          *
@@ -91,12 +89,11 @@ module.exports.sockets = {
   *                                                                          *
   ***************************************************************************/
 
-  // adapter: 'redis',
-  // host: '127.0.0.1',
-  // port: 6379,
-  // db: 'sails',
-  // pass: '<redis auth password>'
-
+  adapter: 'redis',
+  host: process.env.REDISTOGO_HOST || '127.0.0.1',
+  port: process.env.REDISTOGO_PORT || 6379,
+  db: process.env.REDISTOGO_DATABASE || 'segment',
+  pass: process.env.REDISTOGO_PASSWORD || 
 
   /***************************************************************************
   *                                                                          *
