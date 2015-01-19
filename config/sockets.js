@@ -93,7 +93,7 @@ module.exports.sockets = {
   host: process.env.REDISTOGO_HOST || '127.0.0.1',
   port: process.env.REDISTOGO_PORT || 6379,
   db: process.env.REDISTOGO_DATABASE || 'segment',
-  pass: process.env.REDISTOGO_PASSWORD || 
+  pass: process.env.REDISTOGO_PASSWORD || '' 
 
   /***************************************************************************
   *                                                                          *
