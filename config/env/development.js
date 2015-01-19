@@ -2,9 +2,7 @@
  * Development environment settings 
  */
 module.exports = {
-
   models: {
-    connection: ''
+    connection: 'localDiskDb'
   }
-
 };
