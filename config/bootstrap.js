@@ -10,7 +10,5 @@
  */
 
 module.exports.bootstrap = function (callback) {
-  require('newrelic');
-
   callback();
 };
