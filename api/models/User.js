@@ -46,7 +46,7 @@ module.exports = {
     }
   },
 
-  beforeValidation: function (values, next) {
+  beforeValidation: function (values, callback) {
     if (typeof values.admin !== 'undefined') {
       if (values.admin === 'unchecked') {
         values.admin = false;
@@ -54,7 +54,9 @@ module.exports = {
         values.admin = true;
       }
     }
-    next();
+
+    callback();
+
   },
 
   beforeCreate: function (values, next) {
