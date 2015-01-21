@@ -13,30 +13,33 @@
  * For more information on configuration, check out:
  * http://sailsjs.org/#/documentation/reference/sails.config/sails.config.connections.html
  */
- 
+
+var mongolab = 'mongodb://dev:dev@ds031751.mongolab.com:31751/segment';
+
 module.exports.connections = {
 
   /**
-   * Local disk storage for development.
+   * MongoDB database for local development.
    */
   'local': {
-    adapter: 'sails-disk'
+    adapter: 'sails-mongo',
+    url: mongolab
   },
 
   /**
-   * MongoDB database for production
+   * MongoDB database for production environment.
    */
   'production': {
     adapter: 'sails-mongo',
-    url: process.env.MONGOLAB_URI
+    url: process.env.MONGOLAB_URI || mongolab
   },
 
   /**
-   * MongoDB database for development.
+   * MongoDB database for development environment.
    */
   'development': {
     adapter: 'sails-mongo',
-    url: process.env.MONGOLAB_URI
+    url: process.env.MONGOLAB_URI || mongolab
   }
 
 };
