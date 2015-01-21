@@ -18,5 +18,8 @@ mongod.lock
 segment.0
 segment.ns
 
+# Redis
+*.rdb
+
 # Local connection(s) configuration
 config/local.js
