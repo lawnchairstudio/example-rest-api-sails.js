@@ -47,10 +47,11 @@ module.exports = {
   },
 
   beforeValidation: function (values, callback) {
+
     if (typeof values.admin !== 'undefined') {
       if (values.admin === 'unchecked') {
         values.admin = false;
-      } else  if (values.admin[1] === 'on') {
+      } else if (values.admin[1] === 'on') {
         values.admin = true;
       }
     }
