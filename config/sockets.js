@@ -9,6 +9,55 @@
  * For more information on sockets configuration, including advanced config options, see:
  * http://sailsjs.org/#/documentation/reference/sails.config/sails.config.sockets.html
  */
+var redis = {
+
+  /**
+   * @private
+   * @function get
+   * @description Parse the Redis configuration variables.
+   * @param {string} key
+   * @returns {string} value
+   */
+  get: function (key) {
+  
+    var url = require('url');
+    var values;
+    var value; // value returned
+
+    /** 
+     * If in a production environment, parse the 'REDIS' config variable to
+     * get the values for the adapter.
+     * 
+     * In in a development environment, use the default local values.
+     * http://nodejs.org/docs/latest/api/url.html
+     */
+    if (process.env.NODE_ENV === 'production') {
+      values = url.parse(process.env.REDIS);
+    } else {
+      values = {
+        host: '127.0.0.1',
+        port: '',
+        db: 0,
+        pass: 0
+      }
+    }
+
+    switch (key) {
+      case 'host':
+        value = values.host;
+        break;
+      case 'port':
+        value = values.port;
+        break;
+      case 'db':
+        value = values.db; 
+        break;
+    }
+
+    return value;
+  }
+
+};
 
 module.exports.sockets = {
 
@@ -60,10 +109,10 @@ module.exports.sockets = {
   * default: 'redis'
   */
   adapter: 'redis', // or 'memory'
-  host: process.env.REDISTOGO_HOST || '127.0.0.1',
-  port: process.env.REDISTOGO_PORT || 6379,
-  db: process.env.REDISTOGO_DATABASE || 0,
-  pass: process.env.REDISTOGO_PASSWORD || '',
+  host: redis.get('host'),
+  port: redis.get('port'),
+  db: redis.get('db'),
+  pass: redis.get('pass'),
   prefix: 'sess:'
 
   /***************************************************************************
