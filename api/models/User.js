@@ -5,6 +5,9 @@
 * @docs        :: http://sailsjs.org/#!documentation/models
 */
 
+var bcrypt = require('bcrypt');
+var assert = require('assert');
+
 module.exports = {
 
   schema: true,
