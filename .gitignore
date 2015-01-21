@@ -7,6 +7,9 @@ bower_components
 .cache
 .tmp
 
+# Logs
+*.log
+
 # npm
 npm-debug.log
 
