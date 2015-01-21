@@ -37,5 +37,11 @@ module.exports = {
       password: 'lime10',
       database: 'segment'
     }
+  },
+  session: {
+    //adapter: 'memory'
+  },
+  sockets: {
+    //adapter: 'memory'
   }
 };
