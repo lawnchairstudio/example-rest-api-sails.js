@@ -27,16 +27,15 @@ module.exports.session = {
     maxAge: 24 * 60 * 60 * 1000
   }*/
 
-  /**                                        
-  * In production, uncomment the following lines to set up a shared redis
-  * session store that can be shared across multiple Sails.js servers  
-  * Read more about options at: https://github.com/visionmedia/connect-redis 
-  *
-  adapter: 'redis',
+  /**
+   * Use this option to set the datastore for sessions.
+   * default: 'redis'
+   */
+  adapter: 'redis', // or 'memory'
   host: process.env.REDISTOGO_HOST || '127.0.0.1',
   port: process.env.REDISTOGO_PORT || 6379,
-  db: process.env.REDISTOGO_DATABASE || 'segment',
+  db: process.env.REDISTOGO_DATABASE || 0,
   pass: process.env.REDISTOGO_PASSWORD || '',
-  prefix: 'sess:'*/
+  prefix: 'sess:'
 
 };
