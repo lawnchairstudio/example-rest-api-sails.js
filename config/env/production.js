@@ -3,9 +3,9 @@
  */
 module.exports = {
   port: process.env.PORT || 80,
-  environment: 'production',
+  environment: process.env.NODE_ENV || 'production',
   models: {
-    connection: 'productionMongoDB'
+    connection: 'production'
   },
   log: {
     level: 'silent'

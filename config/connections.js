@@ -13,41 +13,30 @@
  * For more information on configuration, check out:
  * http://sailsjs.org/#/documentation/reference/sails.config/sails.config.connections.html
  */
-
+ 
 module.exports.connections = {
 
   /**
    * Local disk storage for development.
    */
-  localDiskDb: {
+  'local': {
     adapter: 'sails-disk'
   },
 
   /**
    * MongoDB database for production
    */
-  productionMongo: {
+  'production': {
     adapter: 'sails-mongo',
     url: process.env.MONGOLAB_URI
   },
 
   /**
-   * Redis database for production
+   * MongoDB database for development.
    */
-  productionRedis: {
-    adapter: 'sails-redis',
-    port: process.env.REDISTOGO_PORT,
-    host: process.env.REDISTOGO_HOST,
-    password: process.env.REDISTOGO_PASSWORD,
-    database: process.env.REDISTOGO_DATABASE,
-    options: {
-      parser: 'hiredis',
-      return_buffers: false,
-      detect_buffers: false,
-      socket_nodelay: true,
-      no_ready_check: false,
-      enable_offline_queue: true
-    }
+  'development': {
+    adapter: 'sails-mongo',
+    url: process.env.MONGOLAB_URI
   }
 
 };
