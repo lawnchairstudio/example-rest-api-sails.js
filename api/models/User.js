@@ -60,17 +60,38 @@ module.exports = {
 
   },
 
-  beforeCreate: function (values, next) {
-    if(!values.password || values.password != values.confirmation) {
-      return next({err: ["Password doesn't match password confirmation."]});
+  beforeCreate: function (values, callback) {
+
+    if (!values.password || !values.confirmation) {
+       return callback('Password required.', null);
+    } else if (values.password != values.confirmation) {
+      return callback('Passwords do not match.', null); // Return the error and a null user object
     }
 
-    require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPassword) {
-      if(err)
-        return next(err);
-      values.encryptedPassword = encryptedPassword;
-      next();
+    bcrypt.hash(values.password, 10, function passwordEncrypted (error, encrypted) {
+      if (error) {
+        return callback(error, null); // Return the error and a null user object
+      } else {
+        try {
+
+          // Assert that the password is encrypted
+          assert.notEqual(values.password, encrypted);
+
+          // Update the value of the password to be encrypted
+          values.password = encrypted;
+         
+          // Return no error 
+          return callback(null, values);
+
+        } catch (error) {
+
+          // If an error is caught, return it and a null user object.
+          return callback(error, null); 
+
+        }
+      }
     });
+
   }
 
 };
