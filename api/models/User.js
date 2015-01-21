@@ -65,7 +65,7 @@ module.exports = {
     if (!values.password || !values.confirmation) {
        return callback('Password required.', null);
     } else if (values.password != values.confirmation) {
-      return callback('Passwords do not match.', null); // Return the error and a null user object
+      return callback('Passwords don\'t match.', null); // Return the error and a null user object
     }
 
     bcrypt.hash(values.password, 10, function passwordEncrypted (error, encrypted) {
