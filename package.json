@@ -4,11 +4,12 @@
   "description": "",
   "private": true,
   "author": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "",
     "postinstall": "",
-    "start": "node app.js"
+    "preinstall": "",
+    "start": "sails lift"
   },
   "engines": {
     "node": "0.10.x",
