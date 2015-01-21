@@ -5,17 +5,11 @@
  * description of configuration variables and their potential values.
  */
 exports.config = {
-
-  /**
-   * Array of application names.
-   */
+  rules: {
+    ignore: ['^/socket.io/*/xhr-polling']
+  },
   app_name: ['Segment'],
-
-  /**
-   * Your New Relic license key.
-   */
   license_key: process.env.NEW_RELIC_LICENSE_KEY,
-
   logging: {
 
     /**
@@ -23,10 +17,7 @@ exports.config = {
      * issues with the agent, 'info' and higher will impose the least overhead on
      * production applications.
      */
-    level: 'trace',
-    rules: {
-      ignore: ['^/socket.io/*/xhr-polling']
-    }
+    level: 'trace'
   }
 
 };

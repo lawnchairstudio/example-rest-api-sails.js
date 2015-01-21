@@ -1,6 +1,6 @@
 
 // Require NewRelic
-require('newrelic');
+var newrelic = require('newrelic');
 
 // Ensure we're in the project directory, so relative paths work as expected
 // no matter where we actually lift from.
