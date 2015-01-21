@@ -14,7 +14,7 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: '3b27fea0ee497bbeb501cab516c9599f25fe942d',
+  license_key: process.env.NEW_RELIC_LICENSE_KEY,
 
   logging: {
 
@@ -23,7 +23,10 @@ exports.config = {
      * issues with the agent, 'info' and higher will impose the least overhead on
      * production applications.
      */
-    level: 'trace'
+    level: 'trace',
+    rules: {
+      ignore: ['^/socket.io/*/xhr-polling']
+    }
   }
 
 };
