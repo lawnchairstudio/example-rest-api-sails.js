@@ -30,12 +30,16 @@ module.exports = {
   port: process.env.PORT || 1337,
   environment: process.env.NODE_ENV || 'development',
   connections: {
-    mongodb: {
+    'mongolab': {
+      adapter: 'sails-mongo',
       host: 'ds029541.mongolab.com',
       port: 29541,
       user: 'dev',
       password: 'lime10',
       database: 'segment'
     }
+  },
+  models: {
+    connection: 'local'
   }
 };

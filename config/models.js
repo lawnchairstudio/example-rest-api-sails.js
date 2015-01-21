@@ -10,5 +10,5 @@
 
 module.exports.models = {
   migrate: 'safe',
-  connection: 'productionMongo'
+  connection: 'production'
 };
