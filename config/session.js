@@ -31,12 +31,12 @@ module.exports.session = {
   * In production, uncomment the following lines to set up a shared redis
   * session store that can be shared across multiple Sails.js servers  
   * Read more about options at: https://github.com/visionmedia/connect-redis 
-  */
+  *
   adapter: 'redis',
   host: process.env.REDISTOGO_HOST || '127.0.0.1',
   port: process.env.REDISTOGO_PORT || 6379,
   db: process.env.REDISTOGO_DATABASE || 'segment',
   pass: process.env.REDISTOGO_PASSWORD || '',
-  prefix: 'sess:'
+  prefix: 'sess:'*/
 
 };

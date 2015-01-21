@@ -87,13 +87,13 @@ module.exports.sockets = {
   * is left unset, Sails will try to connect to redis running on localhost   *
   * via port 6379                                                            *
   *                                                                          *
-  ***************************************************************************/
+  ***************************************************************************
 
   adapter: 'redis',
   host: process.env.REDISTOGO_HOST || '127.0.0.1',
   port: process.env.REDISTOGO_PORT || 6379,
   db: process.env.REDISTOGO_DATABASE || 'segment',
-  pass: process.env.REDISTOGO_PASSWORD || '' 
+  pass: process.env.REDISTOGO_PASSWORD || ''*/
 
   /***************************************************************************
   *                                                                          *
