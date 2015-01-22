@@ -7,8 +7,7 @@ Segment is powered by [Sails](http://sailsjs.org/), a MVC framework for Node.js,
 ## Development
 
 1. Install dependencies: `npm install`
-2. Start the application: `npm start`
-3. Configure Sails, specifically its database connections, for your machine by editing `config/local.js`.
+2. Start the application: `npm start` or `npm run-script watch`
 
 ### Databases
 
