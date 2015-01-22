@@ -1,0 +1,18 @@
+<form action="/image/create" method="POST">
+  <h2>Upload an Image</h2>
+
+  <% if(flash && flash.err) { %>
+    <ul>
+      <% Object.keys(flash.err).forEach(function(error) { %>
+        <li><%- JSON.stringify(flash.err[error]) %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+
+  <input type="file" placeholder="You're Picture" name="image">
+
+  <br />
+
+  <input type="submit" value="Upload Image"/>
+  <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+</form>

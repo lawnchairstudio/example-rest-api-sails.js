@@ -7,8 +7,27 @@
 
 module.exports = {
 
+  schema: true,
+
   attributes: {
+    name: {
+      type: "string",
+      required: true
+    },
+    path: {
+      type: "string",
+      required: true
+    },
+    username: {
+      type: "string",
+      required: true
+    },
 
-  }
+    toJSON: function() {
+      var obj = this.toObject();
+      delete obj.username;
+      delete obj._csrf;
+      return obj;
+    }
+  },
 };
-
