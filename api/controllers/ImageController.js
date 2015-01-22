@@ -8,13 +8,13 @@
 module.exports = {
 
 	index: function (req, res, next) {
-		User.find(function foundUsers (err, users) {
+		Image.find(function foundImages (err, images) {
 			if (err) {
 				return next(err);
 			}
 			res.view({
-				title: 'User List',
-				users: users
+				title: 'Image List',
+				images: images
 			});
 		});
 	},
@@ -23,37 +23,51 @@ module.exports = {
 		res.view();
 	},
 
-	create: function (req, res, next) {
+	upload: function (req, res, next) {
+		req.file('avatar').upload({
+			adapter: require('skipper-s3'),
+			region: "us-west-2",
+			key: 'AKIAJE2T5IEN45RVEINA',
+			secret: '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',
+			bucket: 'storage.segment.social'
+		}, function callback(err, uploadedFiles) {
+			if (err)
+				return next(err);
+			else {
 
-		req.file('avatar').upload(function (err, files) {
+				this.create(req.params.all(), uploadedFiles);
+
+				res.redirect('/image/show/' + image.id);
+
+				/*return res.ok({
+					files: uploadedFiles,
+					textParams: req.params.all()
+				});*/
+			}
+		});
+	},
+
+	create: function (req, res, next, textParams, uploadedFiles) {
+
+		textParams['path'] = uploadedFiles[0].extra.Location;
+
+		Image.create(textParams, function imageCreated (err, image) {
+
+			// If we have an error creating the user
 			if (err) {
 				console.log(err);
 				req.session.flash = {
-					err: "Failed to upload Image."
+					err: err
 				}
 
-				// redirect back to image creation
+				// redirect back to user signup
 				return res.redirect('/image/new');
-			} else {
-				Image.create(req.params.all(), function imageCreated (err, image) {
-
-					// If we have an error creating the image
-					if (err) {
-						console.log(err);
-						req.session.flash = {
-							err: "Failed to save uploaded Image to Database."
-						}
-
-						// redirect back to image creation
-						return res.redirect('/image/new');
-					}
-
-					// Create the image successfully and redirect to the show action
-					//res.json(user);
-
-					res.redirect('/image/show/' + image.id);
-				});
 			}
+
+			// Create the user successfully and redirect to the show action
+			//res.json(user);
+
+			res.redirect('/image/show/' + image.id);
 		});
 	}
 };

@@ -11,21 +11,19 @@ module.exports = {
 
   attributes: {
     name: {
-      type: "string",
-      required: true
+      type: "string"
     },
+
     path: {
-      type: "string",
-      required: true
+      type: "string"
     },
+
     username: {
-      type: "string",
-      required: true
+      type: "string"
     },
 
     toJSON: function() {
       var obj = this.toObject();
-      delete obj.username;
       delete obj._csrf;
       return obj;
     }

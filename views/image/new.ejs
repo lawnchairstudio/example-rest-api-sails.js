@@ -1,4 +1,4 @@
-<form action="/image/create" method="POST">
+<form action="/image/upload" enctype="multipart/form-data" method="post">
   <h2>Upload an Image</h2>
 
   <% if(flash && flash.err) { %>
@@ -9,7 +9,8 @@
     </ul>
   <% } %>
 
-  <input type="file" placeholder="You're Picture" name="image">
+  <input type="text" name="title"><br>
+  <input type="file" name="avatar" multiple="multiple"><br>
 
   <br />
 
