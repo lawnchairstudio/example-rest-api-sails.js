@@ -9,7 +9,8 @@
     "test": "",
     "postinstall": "",
     "preinstall": "",
-    "start": "sails lift"
+    "start": "sails lift",
+    "watch": "nodemon --exec \"sails lift\""
   },
   "engines": {
     "node": "0.10.x",
