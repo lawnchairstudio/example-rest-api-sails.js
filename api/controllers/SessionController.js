@@ -55,7 +55,7 @@ module.exports = {
 			}
 
 			// Compare password from the form params to the encrypted password of the user found.
-			bcrypt.compare(req.param('password'), user.encryptedPassword, function(err, valid) {
+			bcrypt.compare(req.param('password'), user.password, function(err, valid) {
 				if (err) return next(err);
 
 				// If the password from the form doesn't match the password from the database...

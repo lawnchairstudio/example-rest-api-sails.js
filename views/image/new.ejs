@@ -1,13 +1,5 @@
-<form action="/image/upload" enctype="multipart/form-data" method="post">
+<form action="/image/create/<%= user.id %>" enctype="multipart/form-data" method="post">
   <h2>Upload an Image</h2>
-
-  <% if(flash && flash.err) { %>
-    <ul>
-      <% Object.keys(flash.err).forEach(function(error) { %>
-        <li><%- JSON.stringify(flash.err[error]) %></li>
-      <% }) %>
-    </ul>
-  <% } %>
 
   <input type="text" name="title"><br>
   <input type="file" name="avatar" multiple="multiple"><br>

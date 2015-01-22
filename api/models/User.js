@@ -32,7 +32,7 @@ module.exports = {
       type: "boolean",
       defaultsTo: false
     },
-    encryptedPassword: {
+    password: {
       type: "string",
     },
 
@@ -79,14 +79,14 @@ module.exports = {
 
           // Update the value of the password to be encrypted
           values.password = encrypted;
-         
-          // Return no error 
+
+          // Return no error
           return callback(null, values);
 
         } catch (error) {
 
           // If an error is caught, return it and a null user object.
-          return callback(error, null); 
+          return callback(error, null);
 
         }
       }
