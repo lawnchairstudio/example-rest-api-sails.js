@@ -107,5 +107,15 @@ It is worth mentioning that,  when `NODE_ENV=production`, config variables are u
 
 The Redis connections are configured in `config/sockets.js` and `config/session.js`. [See options for the Redis adapter](https://github.com/visionmedia/connect-redis) if further configuration is needed.
 
+### REST API Endpoints
+
+```
+GET   :    /:controller/find            => findAll()
+GET   :    /:controller/find/:id        => find(id)
+POST  :    /:controller/create          => create(id)
+PUT   :    /:controller/update/:id      => update(id)
+DELETE:    /:controller/destroy/:id     => destroy(id)
+```
+
 ---
 Copyright 2015 Segment. All rights reserved.
