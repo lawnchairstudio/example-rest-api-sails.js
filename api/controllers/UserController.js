@@ -50,15 +50,22 @@ module.exports = {
 	},
 
 	show: function (req, res, next) {
-		User.findOne(req.param('id'), function foundUser (err,user) {
+		User.findOne(req.param('id'), function foundUser (err, user) {
 			if (err)
 				return next(err);
 			if (!user)
 				return next();
 
-			res.view({
-				title: user.name,
-				user: user
+			Image.findByUsername(req.param('id'), function foundImage (err, images) {
+				if (err)
+					return next(err);
+				else {
+					res.view({
+						title: user.name,
+						user: user,
+						images: images
+					});
+				}
 			});
 		});
 	},

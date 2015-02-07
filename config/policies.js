@@ -35,6 +35,10 @@ module.exports.policies = {
     edit: "userCanSeeProfile",
     update: "userCanSeeProfile",
     '*': "admin"
+  },
+
+  image: {
+    '*': "userCanSeeProfile"
   }
 
   /***************************************************************************
