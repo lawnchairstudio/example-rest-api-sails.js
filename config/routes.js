@@ -24,10 +24,6 @@ module.exports.routes = {
 
   '/': {
     view: '403'
-  },
-
-  '*': {
-    view: '403'
   }
 
   /*'/:id': {

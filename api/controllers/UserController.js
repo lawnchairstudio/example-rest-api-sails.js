@@ -12,7 +12,7 @@ module.exports = {
       if (err) {
 				return next(err);
       }
-			res.view({
+			res.send({
 				title: 'User List',
 				users: users
 			});
