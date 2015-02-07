@@ -1,2 +1,2 @@
 exports.clean = require('./clean');
-exports.watch = require('./watch');
+exports.header = require('./header');

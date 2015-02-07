@@ -1,3 +1,3 @@
 exports.copy = require('./copy');
 exports.scripts = require('./bundle');
-exports.scripts = require('./styles');
+exports.styles = require('./styles');

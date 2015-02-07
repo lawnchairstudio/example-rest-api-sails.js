@@ -1,0 +1,129 @@
+/**!
+ * @module layout#base
+ * @description Common layout styles.
+ */
+
+/**
+ * @class {component} page
+ * @description The parent container for the 
+ * page content, header, and footer.
+ */
+.page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * @class {utility} page-full-width
+ * @description Increase the width of the page class.
+ */
+.page-full-width {
+  width: 100vw;
+  min-width: 100vw;
+}
+
+/**
+ * @class {utility} page-full-height
+ * @description Increase the height of the page class.
+ */
+.page-full-height {
+  width: 100vh;
+  min-height: 100vh;
+}
+
+/**
+ * @class {utility} page-flex
+ * @description Enable flexbox layout on the page. 
+ */
+.page-flex {
+  display: flex;
+  flex: 1 auto;
+}
+
+.page-full-height.page-full-width.page-flex {
+  section {
+    max-width: 300px;
+    align-self: center;
+    margin: 0 auto;
+  }
+}
+
+/**
+ * @class {component} page-header
+ * @description The header for the page.
+ */
+.page-header {  
+  margin: 3rem 0 2rem 0;
+  padding: 0;
+}
+
+.page-header-full-width {
+  display: flex;
+  flex: 1 auto;
+  height: 25vh;
+  margin: 0 0 3rem 0;
+  padding: 4rem 1rem;
+  text-align: center;
+  hgroup {
+    margin: 0 auto;
+    align-self: center;
+  }
+}
+
+/**
+ * @class {component} page-title
+ * @description The title of the page.
+ * @parent page-header
+ */
+.page-title {
+  margin: 0;
+  padding: 0 .5rem;
+  max-width: 520px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  line-height: 1.2;
+  padding: .5rem;
+  box-sizing: border-box;
+}
+
+/**
+ * @class {component} page-subtitle
+ * @description The subtitle of the page.
+ * @parent page-header
+ */
+.page-subtitle {
+  max-width: 300px;
+  margin: .25rem auto 0 auto;
+  font-size: 1rem;  
+  letter-spacing: .125rem;
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Open Sans';
+}
+
+/**
+ * @class {component} page-content
+ * @description The main body of content on the page. Usually
+ * text and image content.
+ */
+.page-content {
+  font-family: '';
+}
+
+/**
+ * @class {component} page-footer
+ * @description The footer for the page.
+ */
+.page-footer {
+  margin: 2.5rem 0 5rem 0;
+}
+
+/**
+ * @class {component} page-aside
+ * @description Container for page comments.
+ */
+.page-aside {
+  margin: 0 0 5rem 0;
+  font-family: '';
+}
