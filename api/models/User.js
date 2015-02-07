@@ -78,6 +78,28 @@ module.exports = {
           values.password = encrypted;
 
           // Return no error
+          //return callback(null, values);
+
+        } catch (error) {
+          // If an error is caught, return it and a null user object.
+          return callback(error, null);
+        }
+      }
+    });
+
+    bcrypt.hash(values.email, 10, function emailEncrypted (error, encrypted) {
+      if (error) {
+        return callback(error, null); // Return the error and a null user object
+      } else {
+        try {
+
+          // Assert that the password is encrypted
+          assert.notEqual(values.email, encrypted);
+
+          // Update the value of the password to be encrypted
+          values.email = encrypted;
+
+          // Return no error
           return callback(null, values);
 
         } catch (error) {
