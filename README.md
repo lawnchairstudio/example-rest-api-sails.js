@@ -1,4 +1,4 @@
-# Segment
+# Segment API
 
 ## Overview
 
@@ -86,6 +86,7 @@ Other helpful tasks:
 - View application logs: `heroku logs --tail`
 - Open the application: `heroku open`
 - View application configuration: `heroku config`
+- Add existing Heroku Git Origin: `heroku git:remote -a appname`
 
 Addons:
 
