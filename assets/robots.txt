@@ -1,3 +1,0 @@
-# Prevent crawlers from viewing the public directory
-User-Agent: *
-Disallow: /public
