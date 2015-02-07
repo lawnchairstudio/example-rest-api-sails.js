@@ -26,21 +26,6 @@ module.exports.routes = {
     view: '403'
   }
 
-  /*'/:id': {
-    controller: 'user',
-    action: 'profile'
-  },
-
-  /*'/register': {
-    controller: 'user',
-    action: 'new'
-  }/*,
-
-  '/session/new': {
-    controller: 'session',
-    action: 'new'
-  }*/
-
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
