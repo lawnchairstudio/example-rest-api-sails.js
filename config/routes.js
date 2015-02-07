@@ -23,8 +23,12 @@
 module.exports.routes = {
 
   '/': {
-    view: 'static/index'
+    view: '403'
   },
+
+  '*': {
+    view: '403'
+  }
 
   /*'/:id': {
     controller: 'user',
