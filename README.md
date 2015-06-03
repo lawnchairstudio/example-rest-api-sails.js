@@ -1,4 +1,4 @@
-# Sails.js Example REST API
+# Sails.js Example REST API [![Build Status](https://travis-ci.org/lawnchairstudios/example-rest-api-sails.js.svg)](https://travis-ci.org/lawnchairstudios/example-rest-api-sails.js)
 
 [Sails](http://sailsjs.org/), a MVC framework for Node.js, and MongoDB.
 
