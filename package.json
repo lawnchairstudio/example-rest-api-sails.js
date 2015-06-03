@@ -1,13 +1,7 @@
 {
-  "name": "api.segment",
-  "version": "0.6.0",
-  "description": "",
+  "version": "0.7.0",
   "private": true,
-  "author": "",
-  "main": "app.js",
   "scripts": {
-    "test": "",
-    "postinstall": "",
     "start": "sails lift",
     "watch": "nodemon --exec \"sails lift\"",
     "start": "node app.js"
