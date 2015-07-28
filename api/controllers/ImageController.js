@@ -41,8 +41,8 @@ module.exports = {
 				req.file('avatar').upload({
 					adapter: require('skipper-s3'),
 					region: "us-west-2",
-					key: 'AKIAJE2T5IEN45RVEINA',
-					secret: '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',
+					key: '',
+					secret: '',
 					bucket: 'storage.segment.social',
 					maxBytes: 1000000
 				}, function callback(err, uploadedFiles) {
